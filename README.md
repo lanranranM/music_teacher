@@ -16,11 +16,11 @@ This feature checks if you correctly transpose a melody to another key. The mech
 4. recognizes the pitch of each note 
 5. checks the interval of each note in *original_melody* and *transposed_melody*. If the interval isn't right, help the user correct his/her transposition.
 
-**![example](images\example.jpg)**
+**<img src="images/example.jpg" alt="example" width="3000" />**
 
-![piano1](output_images\piano1.png)
+![piano1](output_images/piano1.png)
 
-![piano1_AM1](output_images\piano1_AM1.png)
+![piano1_AM1](output_images/piano1_AM1.png)
 
 - **Singing in Tune**
 
