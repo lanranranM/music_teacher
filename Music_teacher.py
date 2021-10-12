@@ -5,6 +5,7 @@ this is the main function of the program,
 '''
 from pitchcoach import audio_pitch, steps_diff, transpose_checker
 from note_freq import note, freq, note_freq_dict 
+import os
 
 app_collection = {
   1: 'Transposition',
@@ -53,6 +54,8 @@ def main():
           return
       else: break
     org_melody = input('What is the filename of assigned melody? ').strip()
+    while not os.path.exists('input_data/' + org_melody + '.wav'):
+      org_melody = input('File doesn\'t exist. What is the filename of assigned melody? ').strip()
     org_melody_key = input('What is its key? ("key Major/minor") ').strip()
     org_key = get_tonic(org_melody_key)
     #print(org_key)
@@ -62,6 +65,8 @@ def main():
       #print(org_key)
 
     trp_melody = input('What is the filename of your transposition melody? ').strip()
+    while not os.path.exists('input_data/' + trp_melody + '.wav'):
+      trp_melody = input('File doesn\'t exist. What is the filename of assigned melody? ').strip()
     trp_melody_key = input('What is the transposition key? ("key Major/minor") ').strip()
     trp_key = get_tonic(trp_melody_key)
     while trp_key == None:

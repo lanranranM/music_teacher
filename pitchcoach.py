@@ -43,7 +43,7 @@ def find_note(freq): # Find the note with closest frequency
 
 def audio_pitch(filename):
     audio = AudioSegment.from_file('input_data/' + filename + '.wav')
-    audio = audio.high_pass_filter(130).low_pass_filter(4000) # only deal with sounds within C3 - B7
+    audio = audio.high_pass_filter(16.35).low_pass_filter(8000) # only deal with sounds within C0 - B8
     bit_depth = audio.sample_width * 8
     array_type = get_array_type(bit_depth) 
 
